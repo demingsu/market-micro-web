@@ -1,0 +1,64 @@
+@import "./common.less";
+
+.application-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    .cls-float();
+    > aside {
+        float: left;
+        width: 240px;
+        height: 100%;
+        background-color: #001529;
+        z-index: 10;
+        > .brand {
+            display: block;
+            height: 48px;
+            border-bottom: solid 1px @border;
+        }
+        > .content {
+            display: block;
+            height: calc(100% - 48px);
+            overflow-x: hidden;
+        }
+    }
+    > section {
+        float: left;
+        width: calc(100% - 240px);
+        height: 100%;
+        z-index: 6;
+        > header {
+            display: block;
+            position: relative;
+            height: 48px;
+            padding: 8px 12px;
+            background-color: @white;
+            box-shadow: 0 0 10px @border;
+            overflow: hidden;
+            z-index: 8;
+        }
+        > article {
+            display: block;
+            position: relative;
+            height: calc(100% - 48px);
+            padding: 12px;
+            z-index: 7;
+        }
+    }
+}
+
+.el-submenu .el-menu-item {
+    background-color: #000c17!important;
+}
+
+.el-menu-item.is-active {
+    background-color: #1890ff!important;
+}
+
+.el-menu {
+    border-right: none;
+}
